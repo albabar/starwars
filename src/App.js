@@ -5,9 +5,9 @@ import {
   Link
 } from "react-router-dom";
 
-import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
+import Movies from "./Movies";
 
 function App() {
   return (
@@ -45,7 +45,7 @@ function App() {
               <div>All the movies</div>
             </Route>
             <Route path="/">
-              <div>Testing my heart.</div>
+              <Movies />
             </Route>
           </Switch>
         </main>
