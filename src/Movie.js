@@ -8,7 +8,7 @@ function Movies(props) {
 
   useEffect(() => {
     fetch(
-      `https://swapi.dev/api/films/${id}`
+      `https://swapi.dev/api/films/${id}/`
     )
       .then(res => res.json())
       .then(response => {
