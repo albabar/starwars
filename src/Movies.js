@@ -17,8 +17,8 @@ function Movies() {
 
   return (
     <div className="list-group">
-      {movies.map(movie => (
-        <Link to="/" className="ist-group-item list-group-item-action">
+      {movies.map((movie, i) => (
+        <Link key={i} to={`/movies/${movie.url.replace('http://swapi.dev/api/films/', '')}`} className="ist-group-item list-group-item-action">
           <div className="d-flex w-100 justify-content-between">
             <h5 className="mb-1">{movie.title}</h5>
             <small>{movie.release_date.split('-')[0]}</small>

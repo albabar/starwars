@@ -8,6 +8,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import Movies from "./Movies";
+import Movie from "./Movie";
 
 function App() {
   return (
@@ -28,9 +29,6 @@ function App() {
                 <li className="nav-item">
                   <Link to="/" className="nav-link">Home</Link>
                 </li>
-                <li className="nav-item">
-                  <Link to="/movies" className="nav-link">Movies</Link>
-                </li>
               </ul>
             </div>
           </div>
@@ -41,8 +39,8 @@ function App() {
           </div>
 
           <Switch>
-            <Route path="/movies">
-              <div>All the movies</div>
+            <Route path="/movies/:id">
+              <Movie />
             </Route>
             <Route path="/">
               <Movies />
